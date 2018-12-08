@@ -1,0 +1,12 @@
+课程接口：
+    127.0.0.1:8000/api/v1/course/
+    127.0.0.1:8000/api/v2/course/
+单个课程接口:
+    127.0.0.1:8000/api/v1/course/1
+    127.0.0.1:8000/api/v2/course/1
+
+- 路由 as_view 是否添加参数，取决于视图继承的类
+- 序列化
+    - depth
+    - source
+    - 自定义method

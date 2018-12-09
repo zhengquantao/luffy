@@ -17,6 +17,7 @@ class CourseSerializer(serializers.ModelSerializer):
 #         fields = '__all__'
 #         depth = 2  # 根据关联字段找到表序列化2层（0-10）
 
+
 class CourseDetailSerializer(serializers.ModelSerializer):
     # 以下这3种方法只适合one2one/foreignkey/choice
     title = serializers.CharField(source='course.title')
@@ -123,13 +124,6 @@ class CourseView(ViewSetMixin, APIView):
             ret['code'] = 1001
             ret['error'] = '获取失败'
         return Response(ret)
-
-# def test(self, request, *args, **kwargs):
-#     obj = models.Course.objects.filter(id=2).first()
-#     print(obj.title)
-#     print(obj.level)  # 得到的数字
-#     print(obj.get_level_display())  # 得到的是对应文字
-#     return Response('....')
 
 
 class MicroView(APIView):
